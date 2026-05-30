@@ -2,6 +2,7 @@
 import Logo2 from '../assets/images/logo-portfolio.png';
 import '../styles/Header.css';
 import { Image } from 'astro:assets';
+const base = import.meta.env.BASE_URL;
 ---
 
 <header class="header">
@@ -22,10 +23,10 @@ import { Image } from 'astro:assets';
 		<ul>
 			
 			<!-- Dropdown -->
-			<li><a href="#services" class="nav-link">Stack technique</a></li>
-			<li><a href="#apropos" class="nav-link">À propos</a></li>
-			<li><a href="#projets-recents" class="nav-link">Projets</a></li>
-			<li><a href="#contact" class="nav-link">Contact</a></li>
+			<li><a href={`${base}#services`} class="nav-link">Stack technique</a></li>
+			<li><a href={`${base}#apropos`} class="nav-link">À propos</a></li>
+			<li><a href={`${base}#projets-recents`} class="nav-link">Projets</a></li>
+			<li><a href={`${base}#contact`} class="nav-link">Contact</a></li>
 		</ul>
 	</nav>
 </header>

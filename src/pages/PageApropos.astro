@@ -6,10 +6,12 @@ import '../styles/Global.css';
 import '../styles/About.css';
 import { Image } from 'astro:assets';
 import photo from '../assets/images/potfolio-id-image.webp';
+const base = import.meta.env.BASE_URL;
 
 export const prerender = true;
-const title = "À propos – Développeuse web Seine-et-Marne | Lumi Digital Studio";
-const description = "Découvrez qui je suis : développeuse web basée en Seine-et-Marne spécialisée dans la création de sites vitrines modernes, optimisés SEO et adaptés à vos besoins.";
+
+const title = "À propos | Marie Casabianca | Développeuse web front-end";
+const description = "Découvrez mon parcours, ma façon de travailler et mon approche de la création de sites web modernes, responsive et adaptés aux besoins des utilisateurs.";
 ---
 
 <Layout {title} {description}>
@@ -30,7 +32,7 @@ const description = "Découvrez qui je suis : développeuse web basée en Seine-
           Passionnée par la création de <span>sites modernes et authentiques</span>,  
           je transforme vos idées en expériences web uniques.
         </p>
-        <a href="/#contact" class="cta-intro">Travaillons ensemble</a>
+        <a href={`${base}#contact`} class="cta-intro">Travaillons ensemble</a>
       </div>
 
       <div class="about-photo">
@@ -72,23 +74,6 @@ const description = "Découvrez qui je suis : développeuse web basée en Seine-
           <li>Design responsive et moderne</li>
           <li>Conseils personnalisés pour vos projets web</li>
         </ul>
-  
-        <!-- <div class="partnership">
-          <h2>Partenariat photo</h2>
-          <p>
-            Parce qu’un site web de qualité mérite des visuels à la hauteur, je collabore avec 
-            <span>une photographe professionnelle</span> pour offrir à mes clients des <span>photos authentiques et lumineuses</span>.
-          </p>
-          <p>
-            Ce partenariat me permet de proposer des <span>shootings sur mesure</span> : portraits, photos d’entreprise, produits ou ambiance de travail — des visuels essentiels pour sublimer votre site.
-          </p>
-          <p class="partner-cta">
-            <a href="https://anissajalisse.wixsite.com/capture" target="_blank" rel="noopener" class="photographer-link">
-              Découvrez son travail
-            </a>
-          </p>
-        </div> -->
-  
         <h2>Travailler ensemble</h2>
         <p>
           Je suis <span>basée en Seine-et-Marne</span>, mais je collabore avec des clients partout en France.  
@@ -98,7 +83,7 @@ const description = "Découvrez qui je suis : développeuse web basée en Seine-
   
         <div class="cta-container">
           <p class="cta-text"> Vous avez un projet en tête ?  </p>
-          <a class="cta-btn" href="/#contact">Contactez-moi dès aujourd’hui</a>
+          <a class="cta-btn" href={`${base}#contact`}>Contactez-moi dès aujourd’hui</a>
         </div>
       </div>
     </div>
