@@ -1,0 +1,338 @@
+/* ----------------------------- */
+/* SECTION HERO                  */
+/* ----------------------------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url(../assets/images/hero-bg.webp);
+  background-size: cover;
+  background-position: center;
+  transform-origin: center center;
+  will-change: transform;
+  z-index: 0;
+}
+
+/* ----------------------------- */
+/* CONTENEUR PRINCIPAL           */
+/* ----------------------------- */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+  border-radius: var(--radius-m, 16px);
+  padding: 3rem 1.5rem;
+  max-width: 1400px;
+  width: 90%;
+  color: var(--Secondary-text-color);
+  animation: fadeIn 1s ease forwards;
+  overflow: hidden;
+  margin-top: -4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bordure animée façon "étoile filante" */
+/*.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(
+    120deg,
+    #ff8ad8,
+    #7EC5EF,
+    #f9bf73,
+    #468c3d,
+    #D79FBC,
+    #ffb347,
+    #C8E3FD,
+    #ff8ad8,
+    #7EC5EF,
+    #f9bf73,
+    #468c3d,
+    #D79FBC,
+    #ffb347,
+    #C8E3FD
+  );
+  background-size: 400% 400%;
+  animation: borderFlow 8s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
+  opacity: 0.2;
+}
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}*/
+
+/* ----------------------------- */
+/* TYPOGRAPHIE H1 / H2 / P       */
+/* ----------------------------- */
+
+/* H1 petit, centré en haut */
+.hero-content h1 {
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  text-align: center;
+  color: var(--Secondary-text-color);
+  margin-bottom: 1rem;
+}
+
+/* Layout en 2 colonnes : H2 large + P à droite */
+
+.hero-layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* H2 très grand comme sur le visuel */
+.hero-layout h2 {
+  flex: 1.2;
+  font-size: clamp(3rem, 3.5vw, 4rem);
+  line-height: 1.2;
+  color: var(--Secondary-text-color);
+  max-width: 720px;
+}
+
+/* Paragraphe plus petit, “rentré” visuellement sous le h2 */
+.hero-layout p {
+  flex: 0.9;
+  max-width: 420px;                     
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--Secondary-text-color);
+  text-align: left;
+  margin-top: 2.5rem;                          
+}
+
+.hero-row{
+
+  margin: 3rem 0;
+}
+/* Mots en surbrillance dans le paragraphe */
+.hero-highlight {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ----------------------------- */
+/* CTA BUTTON                    */
+/* ----------------------------- */
+
+.cta-btn {
+  display: inline-block;
+  align-self: center;
+  padding: 12px 24px;
+  background-color: var(--accent);
+  color: var(--Secondary-text-color);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 1rem;
+}
+
+.cta-btn:hover {
+  background-color: var(--Secondary-text-color);
+  color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+}
+
+/* -------------------------------------------------- */
+/* IMAGE + TEXTE en 2 colonnes                        */
+/* -------------------------------------------------- */
+
+.hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+
+
+/* ----------------------------- */
+/* TEXTE CIRCULAIRE              */
+/* ----------------------------- */
+
+.circular-text-container {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  width: clamp(80px, 10vw, 120px);
+  height: clamp(80px, 10vw, 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 12;
+  opacity: 0.9;
+}
+
+.circular-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: spin 18s linear infinite;
+  transform-origin: center;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.circular-text span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 0;
+  font-size: clamp(0.55rem, 0.8vw, 0.85rem);
+  color: var(--Secondary-text-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+
+/* ----------------------------- */
+/* ANIMATIONS GLOBALES           */
+/* ----------------------------- */
+
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ----------------------------- */
+/* RESPONSIVE                    */
+/* ----------------------------- */
+
+@media (min-width: 1600px) {
+  .circular-text-container {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .hero {
+    height: auto;              
+    min-height: 100svh;        
+    overflow: visible;       
+    padding: 3rem 0 4rem;      
+    align-items: flex-start;  
+  }
+
+  .hero-content {
+    margin-top: 0;             
+  }
+
+  .hero-layout {
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
+  .hero-layout h2 {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+  }
+  
+
+  .hero-layout p {
+    max-width: none;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .cta-btn {
+    align-self: center;
+  }
+  .hero-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-image img {
+    max-width: 350px;
+  }
+
+  .hero-layout {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    width: 90%;
+    padding: 2rem;
+    margin-top: -2rem;
+  }
+
+  .circular-text-container {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .hero-layout h2{
+    font-size: 1.5rem;
+  }
+}

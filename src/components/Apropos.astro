@@ -1,0 +1,50 @@
+---
+import '../styles/Apropos.css';
+import { Image } from 'astro:assets';
+import photo from'../assets/images/developpeuse-web-site-vitrine-apropos.webp';
+---
+
+
+<section class="apropos" id="apropos">
+    <div class="apropos-inner">
+        <div class="apropos-text">
+            <div class='apropos-img-container hidden-right'>
+                <Image src={photo} alt="présentation"  loading="lazy" class='photo-id'/>
+            </div>
+            <div class='apropos-text-content '>
+                <h2 class="hidden-top">À propos de moi</h2>
+                <p class='hidden-left'>
+                    Après plusieurs années dans le domaine pharmaceutique, j’ai choisi de me reconvertir dans le développement web par passion pour le numérique et la création d’interfaces.
+                    Diplômée Développeuse Web et Web Mobile, je développe aujourd’hui des projets modernes en mettant l’accent sur l’expérience utilisateur, le design responsive et la qualité du code.
+                    J’apprécie particulièrement le front-end et la création d’interfaces élégantes, intuitives et accessibles.
+                </p>
+            </div>
+        </div>
+        <div class='hidden-right'>
+            <a href="/PageApropos" class="apropos-cta">En savoir plus</a>
+        </div>
+        <div class="missions">
+            <div>
+                <p>Ma façon de travailler</p>
+            </div>
+            <div class="card">
+                <div class="deco">
+                    <p>*</p>
+                </div>
+                <p> <span class="hero-highlight">Analyse</span> : Compréhension des besoins et réflexion sur l’expérience utilisateur.</p>
+            </div>
+            <div class="card">
+                <div class="deco">
+                    <p>*</p>
+                </div>
+                <p><span class="hero-highlight">Déveleppement</span> : Création d’interfaces performantes et responsive avec des technologies modernes.</p>
+            </div>
+            <div class="card">
+                <div class="deco">
+                    <p>*</p>
+                </div>
+                <p><span class="hero-highlight">Optimisation</span> : Amélioration des performances, de l’accessibilité et de la maintenabilité du projet. </p>
+            </div>
+        </div>
+    </div>
+</section>

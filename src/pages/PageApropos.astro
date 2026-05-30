@@ -1,0 +1,108 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import '../styles/Global.css';
+import '../styles/About.css';
+import { Image } from 'astro:assets';
+import photo from '../assets/images/potfolio-id-image.webp';
+
+export const prerender = true;
+const title = "À propos – Développeuse web Seine-et-Marne | Lumi Digital Studio";
+const description = "Découvrez qui je suis : développeuse web basée en Seine-et-Marne spécialisée dans la création de sites vitrines modernes, optimisés SEO et adaptés à vos besoins.";
+---
+
+<Layout {title} {description}>
+  <Header />
+
+  <!-- 🌟 Nouvelle section d’intro spectaculaire -->
+  <section class="about">
+    <div class="about-into">
+      <div class="about-overlay"></div>
+
+      <div class="about-text">
+        <h1>
+          <span class="hello">Bonjour, je suis</span>  
+          <div><span class="name">Marie</span></div>
+          <span class="role">Développeuse web & web mobile</span>
+        </h1>
+        <p>
+          Passionnée par la création de <span>sites modernes et authentiques</span>,  
+          je transforme vos idées en expériences web uniques.
+        </p>
+        <a href="/#contact" class="cta-intro">Travaillons ensemble</a>
+      </div>
+
+      <div class="about-photo">
+        <Image src={photo} alt="Marie, développeuse web" loading="eager" class="photo-id" />
+      </div>
+    </div>
+
+    <div class="about-container">
+      <!-- 🌿 Suite du contenu About -->
+      <div class="about-content">
+        <h2>Mon parcours</h2>
+        <p>
+          Après plus de 10 ans d’expérience en tant que préparatrice en pharmacie, j’ai choisi de me reconvertir dans un domaine qui me passionne : 
+          le <span>développement web</span>.  
+        </p>
+        <p>
+          Diplômée en <span>Développement Web et Web Mobile</span>, j’ai conçu plusieurs projets mêlant design, base de données et développement front-end & back-end. 
+          Aujourd’hui, je mets mes compétences au service de clients qui souhaitent une présence digitale solide et professionnelle.
+        </p>
+  
+        <h2>Ma vision du web</h2>
+        <p>
+          Pour moi, un site web n’est pas qu’une vitrine : c’est un véritable outil de communication et de croissance.  
+          Je m’attache à créer des sites qui soient à la fois :
+        </p>
+        <ul>
+          <li>Clairs et esthétiques, reflétant l’image de mes clients</li>
+          <li><span>Responsives</span> et accessibles sur tous les supports</li>
+          <li>Sécurisés et optimisés pour la <span>vitesse de chargement</span></li>
+          <li>Conçus avec un <span>référencement naturel (SEO)</span> efficace</li>
+        </ul>
+  
+        <h2>Mes spécialités</h2>
+        <ul class="skills">
+          <li>Création de <span>sites vitrines sur mesure</span></li>
+          <li>Développement en <span>HTML, CSS, JavaScript, React et Astro</span></li>
+          <li>Sites <span>WordPress</span> faciles à administrer</li>
+          <li>Optimisation SEO et amélioration des performances</li>
+          <li>Design responsive et moderne</li>
+          <li>Conseils personnalisés pour vos projets web</li>
+        </ul>
+  
+        <!-- <div class="partnership">
+          <h2>Partenariat photo</h2>
+          <p>
+            Parce qu’un site web de qualité mérite des visuels à la hauteur, je collabore avec 
+            <span>une photographe professionnelle</span> pour offrir à mes clients des <span>photos authentiques et lumineuses</span>.
+          </p>
+          <p>
+            Ce partenariat me permet de proposer des <span>shootings sur mesure</span> : portraits, photos d’entreprise, produits ou ambiance de travail — des visuels essentiels pour sublimer votre site.
+          </p>
+          <p class="partner-cta">
+            <a href="https://anissajalisse.wixsite.com/capture" target="_blank" rel="noopener" class="photographer-link">
+              Découvrez son travail
+            </a>
+          </p>
+        </div> -->
+  
+        <h2>Travailler ensemble</h2>
+        <p>
+          Je suis <span>basée en Seine-et-Marne</span>, mais je collabore avec des clients partout en France.  
+          Que vous ayez besoin d’un <span>site vitrine simple</span> ou d’un projet <span>plus complexe</span>, 
+          je vous accompagne à chaque étape.
+        </p>
+  
+        <div class="cta-container">
+          <p class="cta-text"> Vous avez un projet en tête ?  </p>
+          <a class="cta-btn" href="/#contact">Contactez-moi dès aujourd’hui</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

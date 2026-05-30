@@ -1,0 +1,57 @@
+---
+import Logo from '../assets/images/logo-portfolio.png';
+import Insta from '../assets/icons/instagram.png';
+import '../styles/Footer.css';
+import { Image } from 'astro:assets';
+---
+
+<footer class="footer">
+    <div class="footer-top">
+        <!-- Logo -->
+        <div class='footer-top-left'>
+            <a class="footer-logo" href="/">
+                <Image src={Logo} alt="logo-md-web-developpement-site-vitrine" loading='lazy' />
+            </a>
+            <!-- Réseaux sociaux -->
+            <!-- 
+                <div class="footer-socials">
+                    <a href="" target="_blank" class="social-link">
+                        <img src={Insta.src} alt="Instagram" loading='lazy'>
+                        <span>Suivez-moi</span>
+                    </a>
+                </div>
+            -->
+        </div>
+
+        <div class='footer-top-right'>
+            <!-- Menu -->
+            <div class="footer-menu">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="/#services">Stack technique</a></li>
+                        <li><a href="/#apropos">A propos</a></li>
+                        <li><a href="/#projets-recents">Projets</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Ligne de séparation -->
+            <hr class="footer-separator">
+        
+            <!-- Slogan -->
+            <div class="footer-slogan">
+                <p>Votre projet web, Créez avec soin, Codez avec passion</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ligne de séparation -->
+    <hr class="footer-separator">
+
+    <!-- Bas du footer -->
+    <div class="footer-bottom">
+        <div class="footer-links">
+            
+        </div>
+    </div>
+</footer>

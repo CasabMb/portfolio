@@ -1,0 +1,29 @@
+---
+import '../styles/Global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Apropos from '../components/Apropos.astro';
+import Services from '../components/Services.astro';
+import Contact from '../components/Contact.astro';
+import ProjetsRecents from '../components/ProjetsRecents.astro';
+import Engagements from '../components/Engagements.astro';
+import Probleme from '../components/Probleme.astro';
+
+export const prerender = true;
+const title = "Page d’accueil | Lumi Digital Studio";
+const description="Développeuse web freelance en Seine-et-Marne, je crée des sites vitrines modernes et adaptés à vos besoins pour valoriser votre activité en ligne."
+---
+
+<Layout {title} {description}>
+	<Header />
+	<Hero />
+	<Probleme />
+	<Services />
+	<Apropos />
+	<ProjetsRecents />
+	<Engagements />
+	<Contact />
+	<Footer />
+</Layout>
