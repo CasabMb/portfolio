@@ -1,7 +1,6 @@
 /* --- SECTION À PROPOS --- */
 .apropos {
   padding: 10vh 5% 5vh;
-  overflow-x: hidden;
 }
 /* --- CONTENEUR IMAGE + TEXTE --- */
 .apropos-text {
